@@ -38,6 +38,12 @@ public class WordProcessor
         };
     }
 
+    /// <summary>
+    /// Calculates the weight of a certain word within the input.
+    /// </summary>
+    /// <param name="count">The total count of words in the input.</param>
+    /// <param name="occurrence">The count of a specific word in the input.</param>
+    /// <returns>The weight calculated based on the occurrence of the word as a percentage of the total count.</returns>
     private string GenerateWeight(int count, int occurrence)
     {
         return ((decimal)occurrence / count * 100m).ToString("F");
