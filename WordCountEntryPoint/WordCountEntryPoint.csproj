@@ -9,6 +9,7 @@
 
     <ItemGroup>
       <ProjectReference Include="..\WordCountLogic\WordCountLogic.csproj" />
+      <ProjectReference Include="..\WordCountModels\WordCountModels.csproj" />
     </ItemGroup>
 
 </Project>
