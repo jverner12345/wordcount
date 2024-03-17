@@ -1,4 +1,5 @@
-﻿using WordCountLogic;
+﻿using System;
+using WordCountLogic;
 
 namespace WordCountEntryPoint
 {
