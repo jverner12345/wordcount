@@ -24,16 +24,16 @@ namespace WordCount.Api.Extensions
                     },
                     Description = "Api allowing users to count the occurence of words in a sentence."
                 });
-                
+
                 // include API xml documentation
-                var apiAssembly = typeof(Startup).Assembly;
-                c.IncludeXmlComments(GetXmlDocumentationFileFor(apiAssembly));
+                c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory,
+                   $"{Assembly.GetExecutingAssembly().GetName().Name}.xml"));
             });
         }
         
         private static string GetXmlDocumentationFileFor(Assembly assembly)
         {
-            var documentationFile = $"{assembly.GetName().Name}.xml";
+            var documentationFile = $"{System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().GetName().CodeBase)}.xml";
             var path = Path.Combine(AppContext.BaseDirectory, documentationFile);
 
             return path;
